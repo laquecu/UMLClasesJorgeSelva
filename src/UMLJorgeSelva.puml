@@ -37,6 +37,14 @@ Person -- Conference
 Location -- Event
 Member -- Event
 BoardMeeting -- BoardMember
+Location"0..*"--AAUOC
+Location"1"--"0..*"Event: isLocatedin
+Event"0..*"--AAUOC
+Person"0..*"--AAUOC
+Person"0..*"--"0..*"Conference: attendsTo
+Event"0..*"--"0..*"Member: attendsTo
+BoardMeeting"0..*"--"0.**"BoardMember: attendsTo
+
 
 
 @enduml
