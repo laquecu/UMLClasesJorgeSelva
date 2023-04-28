@@ -1,0 +1,22 @@
+@startuml
+class Event {}
+class Conference {}
+class BoardMeeting {}
+Event<|-- Conference
+Event<|-- BoardMeeting
+class Person {}
+class Member {}
+class BoardMember {}
+Person<|-- Member
+Member<|-- BoardMember
+class AAUOC {}
+class Location {}
+AAUOC o-- Event
+AAUOC o-- Location
+AAUOC o-- Person
+Person -- Conference
+Location -- Event
+Member -- Event
+BoardMeeting -- BoardMember
+
+@enduml
